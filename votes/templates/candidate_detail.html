@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block head %}
+  this is the index page
+{% endblock %}
+
+
+{% block body %}
+    Firstname: {{candidates.firstname}} <br/>
+    Lastname : {{candidates.lastname}} <br/>
+    Position : {{ }} <br/>
+    Vote Count : {{ }} <br/>
+    <!-- Platform : {{vote.content}} <br/> -->
+
+    <a href = "{% url 'votes:index' %}"> Return to Index Page </a>
+      <a href = "{% url 'votes:candidate_update' %}"> Update Candidate </a>
+        <a href = "{% url 'votes:vote' %}"> Vote Candidate </a>
+
+{% endblock %}

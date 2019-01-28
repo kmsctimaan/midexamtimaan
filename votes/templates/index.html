@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block head %}
+  this is the index page
+{% endblock %}
+
+
+{% block body %}
+  <ol>
+  {% for votes in votes %}
+  <li>
+      Candidates: {{candidates.firstname}}, {{candidates.lastname}} <br/>
+      </li>
+      {% endfor %}
+  </ol>
+
+  <a href = "{% url 'votes:candidate_create' %}"> Add a New Candidate </a>
+
+
+{% endblock %}
